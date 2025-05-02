@@ -7,14 +7,14 @@ const verifyToken = require("./authMiddleware");
 
 
 const app = express();
-const PORT =  process.env.PORT || 5000;
-const JWT_SECRET = process.env.JWT_SECRET || "abozar12345";
-const MONGODB_URI = process.env.MONGODB_URI;
+const PORT = 5000;
+const JWT_SECRET = "abozar12345";
+
 
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect(MONGODB_URIل, {
+mongoose.connect("mongodb+srv://vakiliabozar3:vHP7ERNa1z9w7VEW@abozar.vgpl4zq.mongodb.net/?retryWrites=true&w=majority&appName=Abozar", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 }).then(() => console.log("✅ MongoDB connected"))
