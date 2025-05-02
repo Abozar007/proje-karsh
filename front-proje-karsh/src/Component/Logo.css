@@ -1,0 +1,46 @@
+.logo-container {
+    width: 80px;
+    height: 80px;
+    perspective: 800px;
+    margin: 0;
+  }
+  
+  .logo-cube {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transform: rotateY(10deg) rotateX(10deg); /* ثابت */
+  }
+  
+  .logo-face.front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #1f2937; /* slate-800 */
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateZ(24px);
+    box-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
+  }
+  
+  .logo-icon {
+    width: 36px;
+    height: 36px;
+    margin-bottom: 4px;
+  }
+  
+  .logo-text {
+    font-size: 0.75rem;
+    color: white;
+    font-weight: 600;
+  }
+  
+  .logos {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  

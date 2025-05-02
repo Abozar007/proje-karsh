@@ -1,0 +1,293 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  background: rgba(18, 18, 18, 0.8); 
+  backdrop-filter: blur(12px);
+  padding: 1rem 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  z-index: 1000;
+  transition: all 0.3s ease;
+  color: #f0f0f0;
+}
+
+.navbar.scrolled {
+  padding: 0.6rem 1.5rem;
+  background: rgba(18, 18, 18, 0.95);
+  box-shadow: 0 2px 10px rgba(160, 32, 240, 0.15); 
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #A020F0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.search-box {
+  flex: 1;
+  max-width: 400px;
+  position: relative;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.6rem 1rem 0.6rem 2.5rem;
+  background-color: #1f1f1f;
+  border-radius: 0.75rem;
+  border: 1px solid #333;
+  color: #f1f1f1;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #00D4FF;
+  box-shadow: 0 0 8px #00D4FF;
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 0.75rem;
+  transform: translateY(-50%);
+  color: #999;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cart-icon,
+.profile-icon,
+.Home-icon {
+  font-size: 1.75rem;
+  color: #fff;
+  transition: color 0.2s ease;
+  cursor: pointer;
+}
+
+.cart-icon:hover,
+.profile-icon:hover,
+.Home-icon:hover {
+  color: #00D4FF;
+}
+
+.cart-container {
+  position: relative;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  background: #A020F0;
+  color: white;
+  font-size: 0.7rem;
+  padding: 2px 6px;
+  border-radius: 9999px;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+}
+.menu-toggle:hover{
+  color: #00D4FF;
+}
+.desktop-menu {
+  margin-top: 10px;
+}
+
+.menu-list {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+.menu-list li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #fff;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+.menu-list li a:hover {
+  color: #00d5ff;
+}
+.slide-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 250px;
+  height: 100vh;
+  background: rgba(18, 18, 18, 0.8);
+  color: white;
+  padding: 2rem 1rem;
+  flex-direction: column;
+  gap: 1.5rem;
+  box-shadow: -2px 0 10px rgba(0, 212, 255, 0.15);
+  transition: right 0.3s ease;
+  z-index: 1500;
+}
+.profile-dropdown {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  padding: 0.5rem 1rem;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.profile-dropdown a, .profile-dropdown button {
+  text-decoration: none;
+  color: #333;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+@media (max-width: 1000px) {
+  .search-box {
+    display: none;
+  }
+  .slide-menu{
+    display: flex;
+  }
+  .slide-menu.open {
+    right: 0;
+  }
+  
+  .menu-toggle {
+    display: block;
+  }
+}
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.75rem;
+  color: #00D4FF;
+  align-self: flex-end;
+  cursor: pointer;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(2px);
+  z-index: 1400;
+}
+
+.nav-link {
+  color: #f0f0f0;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #00D4FF;
+}
+
+@media (max-width: 768px) {
+  .desktop-menu {
+    display: none;
+  }
+}
+.page-container {
+  padding: 2rem;
+}
+
+/* .order-list, .wishlist {
+  list-style: none;
+  padding: 0;
+}
+
+.order-item, .wishlist-item {
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: #fafafa;
+} */
+.language-dropdown {
+  position: relative;
+}
+
+.language-button {
+  background: none;
+  border: none;
+  font-size: 1.75rem;
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.language-button:hover {
+  color: #00D4FF;
+}
+
+.language-menu {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background: #1f1f1f;
+  border: 1px solid #333;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+  min-width: 100px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.language-menu.open {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.language-menu button {
+  background: none;
+  border: none;
+  color: #f1f1f1;
+  padding: 0.5rem 1rem;
+  text-align: left;
+  width: 100%;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+.language-menu button:hover {
+  background: #333;
+}

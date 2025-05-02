@@ -1,0 +1,105 @@
+.profile-container {
+  max-width: 600px;
+  margin: 3rem auto;
+  background: rgba(18, 18, 18, 0.85);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 1rem;
+  padding: 2rem;
+  color: #f0f0f0;
+  box-shadow: 0 0 15px rgba(160, 32, 240, 0.1);
+  font-family: 'Poppins', sans-serif;
+}
+.profile-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 2px solid #ccc;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.avatardiv{
+  display: flex;
+  align-items: center;
+}
+.profile-container h2 {
+  color: #00D4FF;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.profile-info {
+  margin-bottom: 2rem;
+  line-height: 1.8;
+}
+
+.profile-info span {
+  display: block;
+  font-size: 1.1rem;
+}
+
+.profile-info strong {
+  color: #A020F0;
+}
+
+/* استایل جدید برای فیلدهای ورودی */
+.profile-info input {
+  width: 100%;
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #555;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+/* استایل فیلدها هنگام فوکوس */
+.profile-info input:focus {
+  outline: none;
+  border-color: #A020F0;
+  box-shadow: 0 0 5px rgba(160, 32, 240, 0.5);
+}
+
+/* استفاده از Flexbox برای آدرس و شماره تلفن */
+.profile-info .contact-fields {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.profile-info .contact-fields input {
+  flex: 1;
+  min-width: 200px; /* به حداقل عرض فیلدها محدود کنیم */
+}
+
+/* برای دکمه‌ها */
+.profile-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.profile-buttons button {
+  flex: 1;
+  min-width: 130px;
+  padding: 0.75rem 1.2rem;
+  background: #1f1f1f;
+  color: #00D4FF;
+  border: 1px solid #333;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.profile-buttons button:hover {
+  background-color: #A020F0;
+  color: #fff;
+  box-shadow: 0 0 8px rgba(160, 32, 240, 0.4);
+}
+
