@@ -1,4 +1,3 @@
-// components/Logo3D.jsx
 import React from "react";
 import "./Logo.css";
 

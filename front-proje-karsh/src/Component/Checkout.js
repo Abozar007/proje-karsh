@@ -1,13 +1,13 @@
 import { useContext, useState } from "react";
 import { CartContext } from "./CartContext";
 import { useNavigate } from "react-router-dom";
-import { useTranslation } from "react-i18next"; // اضافه شده
+import { useTranslation } from "react-i18next"; 
 import "./Checkout.css";
 
 export default function Checkout() {
   const { cartItems } = useContext(CartContext);
   const navigate = useNavigate();
-  const { t } = useTranslation(); // اضافه شده
+  const { t } = useTranslation();
 
   const totalPrice = cartItems.reduce(
     (sum, item) => sum + item.price * (item.quantity || 1),

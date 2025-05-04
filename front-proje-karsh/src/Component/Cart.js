@@ -1,14 +1,14 @@
 import { useContext } from "react";
 import { CartContext } from "./CartContext";
-import { useNavigate } from "react-router-dom";
-import { useTranslation } from "react-i18next"; // اضافه شده
+// import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import OrderSummary from "./OrderSummary";
 import "./Cart.css";
 
 export default function Cart() {
   const { cartItems, removeFromCart, increaseQuantity, decreaseQuantity } = useContext(CartContext);
-  const navigate = useNavigate();
-  const { t } = useTranslation(); // اضافه شده
+  // const navigate = useNavigate();
+  const { t } = useTranslation(); 
 
   return (
     <div className="cart-page">
