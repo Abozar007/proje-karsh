@@ -26,8 +26,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "preinstall": "npx npm-force-resolutions"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -49,9 +48,6 @@
   },
   "devDependencies": {
     "typescript": "^5.1.6"
-  },
-  "resolutions": {
-  "ajv": "^8.17.1"
-}
+  }
 
 }
