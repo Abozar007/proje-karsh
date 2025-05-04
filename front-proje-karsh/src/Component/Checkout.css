@@ -12,8 +12,6 @@
   background-size: cover;
   top: 0;
 }
-
-/* جعبه‌های فرم و خلاصه سفارش */
 .checkout-box {
   background: rgba(255, 255, 255, 0.05);
   box-shadow: 0 0 25px rgba(160, 32, 240, 0.15);
@@ -40,8 +38,6 @@
   font-size: 1.4rem;
   text-align: center;
 }
-
-/* فرم ورودی */
 .form-side input {
   width: 90%;
   padding: 0.9rem;
@@ -61,8 +57,6 @@
   border-color: #A020F0;
   box-shadow: 0 0 8px #A020F0;
 }
-
-/* دکمه پرداخت */
 .pay-btn {
   width: 100%;
   padding: 1rem;
@@ -80,8 +74,6 @@
   transform: scale(1.03);
   background: linear-gradient(45deg, #00D4FF, #A020F0);
 }
-
-/* خلاصه سفارش */
 .summary-side p {
   margin-bottom: 1rem;
   font-size: 1rem;
@@ -99,7 +91,6 @@
   border-top: 1px solid #333;
 }
 
-/* حالت ریسپانسیو */
 @media screen and (max-width: 768px) {
   .checkout-container {
     flex-direction: column-reverse;

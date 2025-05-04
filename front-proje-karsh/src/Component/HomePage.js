@@ -5,6 +5,7 @@ import Why from "./Why";
 import ChatWidget from "./ChatWidget";
 import ProductFinder from "./ProductFinder";
 import Banner from "./Banner";
+import Subscribe from "./Subscribe";
 
 function HomePage() {
 
@@ -24,6 +25,7 @@ function HomePage() {
         <Cards showAll={false} addToCart={(product) => console.log('Added to cart:', product)} />
       </div>
       <div>
+        <Subscribe />
         <Footer />
       </div>
     </div>

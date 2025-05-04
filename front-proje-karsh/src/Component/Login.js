@@ -13,11 +13,10 @@ export default function Login() {
   const [signInData, setSignInData] = useState({ email: "", password: "" });
   const [errorMessage, setErrorMessage] = useState("");
   
-  // State برای نمایش/مخفی کردن پسورد
-  const [showPassword, setShowPassword] = useState(false);
+  const [showPassword, /*setShowPassword*/] = useState(false);
 
   const toggleForm = () => {
-    setErrorMessage(""); // وقتی فرم عوض میشه خطاها پاک بشه
+    setErrorMessage(""); 
     setIsSignIn(!isSignIn);
   };
 
@@ -113,21 +112,22 @@ export default function Login() {
               value={signInData.email}
               onChange={(e) => setSignInData({ ...signInData, email: e.target.value })}
             />
-            <div className={styles.passwordContainer}>
+            {/* <div className={styles.passwordContainer}> */}
               <input
-                type={showPassword ? "text" : "password"}
+              /*type={showpassword ? "text" : "password"} */
+                type={"password"}
                 placeholder={t('login.password')}
                 value={signInData.password}
                 onChange={(e) => setSignInData({ ...signInData, password: e.target.value })}
               />
-              <button
+              {/* <button
                 type="button"
                 className={styles.togglePassword}
                 onClick={() => setShowPassword(!showPassword)}
               >
                 {showPassword ? "🙈" : "👁️"}
-              </button>
-            </div>
+              </button> */}
+            {/* </div> */}
             <button type="button" className={styles.linkButton}>
               {t('login.forgotPassword')}
             </button>
@@ -153,21 +153,21 @@ export default function Login() {
               value={signUpData.email}
               onChange={(e) => setSignUpData({ ...signUpData, email: e.target.value })}
             />
-            <div className={styles.passwordContainer}>
+            {/* <div className={styles.passwordContainer}> */}
               <input
                 type={showPassword ? "text" : "password"}
                 placeholder={t('login.password')}
                 value={signUpData.password}
                 onChange={(e) => setSignUpData({ ...signUpData, password: e.target.value })}
               />
-              <button
+              {/* <button
                 type="button"
                 className={styles.togglePassword}
                 onClick={() => setShowPassword(!showPassword)}
               >
                 {showPassword ? "🙈" : "👁️"}
-              </button>
-            </div>
+              </button> */}
+            {/* </div> */}
             <button onClick={handleSignUp} className={styles.primaryButton}>
               {t('login.signUp')}
             </button>
